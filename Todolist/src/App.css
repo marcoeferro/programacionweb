@@ -1,0 +1,64 @@
+.UpperPart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+.UpperPart input[type="text"] {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.LowerPart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  width: 100%;
+}
+
+#input1 {
+  height: 30px;
+  width: 300px;
+}
+
+button {
+  height: 30px;
+  width: 60px;
+}
+
+li {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 33.6px;
+  padding: 1px;
+}
+
+.left-Task {
+  display: flex;
+  align-items: center;
+}
+
+.text-Task {
+  margin-left: 10px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
