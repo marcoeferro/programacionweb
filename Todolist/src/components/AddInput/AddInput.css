@@ -1,0 +1,6 @@
+input {
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    flex: 7;
+}
