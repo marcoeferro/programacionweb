@@ -1,0 +1,43 @@
+.UpperPart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.UpperPart input[type="text"] {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    flex: 7;
+}
+
+.UpperPart span {
+    flex: 3;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+input {
+    height: 30px;
+}
+
+li {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-Task {
+    display: flex;
+    align-items: center;
+}
+
+.text-Task {
+    margin-left: 10px;
+}
