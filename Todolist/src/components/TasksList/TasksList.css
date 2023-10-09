@@ -1,0 +1,17 @@
+li {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.Cartel {
+    justify-content: center;
+}
