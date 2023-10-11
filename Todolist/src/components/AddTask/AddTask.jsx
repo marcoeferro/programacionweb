@@ -1,11 +1,12 @@
-import "./AddTask.css"
+import "./AddTask.scss"
 import AddTitle from "../AddTitle/AddTitle"
 import AddInput from '../AddInput/AddInput'
 import AddButton from "../AddButton/AddButton"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function AddTask({ onAddTask, title, inputplaceholder, inputtype, buttontext }) {
     const [newTask, setNewTask] = useState('')
+    const [isUpperPartFixed, setIsUpperPartFixed] = useState(false);
 
     const handleInputChange = (event) => {
         setNewTask(event.target.value);
@@ -14,12 +15,35 @@ function AddTask({ onAddTask, title, inputplaceholder, inputtype, buttontext }) 
     const handleAddTask = () => {
         newTask != '' ? onAddTask(newTask) : pass;
         setNewTask('')
-        // Llama a la función del padre pasando el nombre de la tarea
-        // Limpia el campo de entrada
     }
+
+    useEffect(() => {
+        const upperPart = document.querySelector('.UpperPart');
+        const container = document.querySelector('h1');
+        const handleScroll = () => {
+            const inputRect = upperPart.getBoundingClientRect();
+            const contentRect = container.getBoundingClientRect();
+
+            if (!isUpperPartFixed && inputRect.top <= 0) {
+                upperPart.style.position = 'fixed';
+                upperPart.style.top = '0';
+                setIsUpperPartFixed(true);
+            } else if (isUpperPartFixed && contentRect.bottom > -34) {
+                upperPart.style.position = 'relative';
+                setIsUpperPartFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isUpperPartFixed]);
+
     return (
         <>
-            <div>
+            <div className="add-tast-contenedor">
                 <AddTitle title={title} />
                 <div className='UpperPart'>
                     <AddInput value={newTask} handleInputChange={handleInputChange} placeholder={inputplaceholder} type={inputtype} />

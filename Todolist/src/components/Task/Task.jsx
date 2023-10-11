@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import TaskCheckbox from '../TaskCheckbox/TaskCheckbox'
 import TextTask from '../TextTask/TextTask'
-import TaskIcon from '../TaskIcon/TaskIcon'
 import "./Task.css"
+import Icons from '../Taskicons/Icons'
 function Task({ name, onDelete, id }) {
     const [isChecked, setIsChecked] = useState(false);
 
@@ -15,7 +15,7 @@ function Task({ name, onDelete, id }) {
                 <TaskCheckbox onChange={handleCheckboxChange} />
                 <TextTask name={name} isChecked={isChecked} />
             </div>
-            <TaskIcon onDelete={onDelete} id={id} />
+            <Icons onDelete={onDelete} id={id} />
         </>
     )
 }

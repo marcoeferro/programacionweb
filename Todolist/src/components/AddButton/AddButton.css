@@ -1,3 +1,11 @@
 span {
     flex: 3;
 }
+
+.button-task {
+    width: 33px;
+    height: 33px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
