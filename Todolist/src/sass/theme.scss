@@ -1,0 +1,17 @@
+// Para el tema oscuro
+$background-color-dark: #242424;
+$text-color-dark: #fff;
+
+// Para el tema claro
+$background-color-light: #fff;
+$text-color-light: #222;
+
+.dark-theme {
+    background-color: $background-color-dark;
+    color: $text-color-dark;
+}
+
+.light-theme {
+    background-color: $background-color-light;
+    color: $text-color-light;
+}

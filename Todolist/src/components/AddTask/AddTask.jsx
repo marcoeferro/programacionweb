@@ -1,4 +1,5 @@
 import "./AddTask.scss"
+import "./../Todolist.scss"
 import AddTitle from "../AddTitle/AddTitle"
 import AddInput from '../AddInput/AddInput'
 import AddButton from "../AddButton/AddButton"

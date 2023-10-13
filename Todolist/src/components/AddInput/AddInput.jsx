@@ -1,4 +1,3 @@
-import "./AddInput.css"
 function AddInput({ placeholder, type, handleInputChange, value }) {
     return (
         <>
