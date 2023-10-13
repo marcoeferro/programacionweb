@@ -1,14 +1,24 @@
-li {
+@import './../../sass/theme.scss';
+
+.items {
     border: 2px solid #000000;
-    border-radius: 4px;
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 32px;
+
+    &.dark-mode {
+        border: 2px solid #ffffff;
+    }
+
+    &.light-mode {
+        border: 2px solid #000000;
+    }
 }
 
-ul {
+.lista-items {
     list-style-type: none;
     padding-left: 0px;
     display: flex;
@@ -16,6 +26,15 @@ ul {
     gap: 8px;
 }
 
-.Cartel {
+.cartel {
     justify-content: center;
+    border-radius: 8px;
+
+    &.dark-mode {
+        border: 2px solid #ffffff;
+    }
+
+    &.light-mode {
+        border: 2px solid #000000;
+    }
 }
