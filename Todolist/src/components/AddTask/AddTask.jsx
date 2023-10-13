@@ -1,11 +1,10 @@
 import "./AddTask.scss"
 import "./../Todolist.scss"
-import AddTitle from "../AddTitle/AddTitle"
 import AddInput from '../AddInput/AddInput'
 import AddButton from "../AddButton/AddButton"
 import { useState, useEffect } from "react"
 
-function AddTask({ onAddTask, title, inputplaceholder, inputtype, buttontext }) {
+function AddTask({ onAddTask, inputplaceholder, inputtype, buttontext, isDarkMode }) {
     const [newTask, setNewTask] = useState('')
     const [isUpperPartFixed, setIsUpperPartFixed] = useState(false);
 
@@ -45,10 +44,10 @@ function AddTask({ onAddTask, title, inputplaceholder, inputtype, buttontext }) 
     return (
         <>
             <div className="add-tast-contenedor">
-                <AddTitle title={title} />
+
                 <div className='UpperPart'>
-                    <AddInput value={newTask} handleInputChange={handleInputChange} placeholder={inputplaceholder} type={inputtype} />
-                    <AddButton text={buttontext} onClick={handleAddTask} />
+                    <AddInput isDarkMode={isDarkMode} value={newTask} handleInputChange={handleInputChange} placeholder={inputplaceholder} type={inputtype} />
+                    <AddButton isDarkMode={isDarkMode} text={buttontext} onClick={handleAddTask} />
                 </div>
             </div>
         </>

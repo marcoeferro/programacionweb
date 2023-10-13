@@ -1,8 +1,8 @@
-import "./AddButton.css"
-function AddButton({ text, onClick }) {
+import "./AddButton.scss"
+function AddButton({ text, onClick, isDarkMode }) {
     return (
         <>
-            <button className="button-task" onClick={onClick} >
+            <button className={`button-task ${isDarkMode ? 'light-mode' : 'dark-mode'}`} onClick={onClick} >
                 <span class="material-symbols-outlined">
                     done
                 </span>

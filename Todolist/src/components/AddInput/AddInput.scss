@@ -1,0 +1,21 @@
+@import '../../sass/theme.scss';
+
+.input-task {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    flex: 7;
+    transition: border-color 0.25s;
+    height: 32px;
+    text-align: center;
+
+    &.dark-mode {
+        border-color: white;
+        color: white;
+    }
+
+    &.light-mode {
+        border-color: black;
+        color: black;
+
+    }
+}

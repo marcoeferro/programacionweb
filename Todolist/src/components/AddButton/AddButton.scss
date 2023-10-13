@@ -1,0 +1,23 @@
+@import "../../sass/theme.scss";
+
+span {
+    flex: 3;
+}
+
+.button-task {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid;
+
+    &.dark-mode {
+        border-color: white;
+    }
+
+    &.light-mode {
+
+        border-color: black;
+    }
+}

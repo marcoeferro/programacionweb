@@ -1,7 +1,9 @@
+import "./TodoList.scss"
 import { useState } from 'react'
 import AddTask from './AddTask/AddTask'
 import TaskList from './TasksList/TasksList'
-import "./TodoList.scss"
+import AddTitle from "./AddTitle/AddTitle"
+
 function TodoList() {
     const [tasks, setTasks] = useState([])
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -19,22 +21,20 @@ function TodoList() {
     const toggleMode = () => {
         setIsDarkMode(!isDarkMode);
         if (isDarkMode) {
-            document.body.classList.remove('light-theme');
-            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
         } else {
-            document.body.classList.remove('dark-theme');
-            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
         }
     };
 
     return (
         <>
-            <div className="Todo">
-                <button onClick={toggleMode} className="mode-toggle">
-                    Cambiar Modo
-                </button>
-                <AddTask mode={isDarkMode} onAddTask={handleAddTask} title="Lista de Marco" inputplaceholder="Ingrese una Tarea Nueva" inputtype="text" buttontext="Add" />
-                <TaskList mode={isDarkMode} onDelete={handleRemoveTask} tasks={tasks} />
+            <div>
+                <AddTitle title="Lista de Marc" isDarkMode={isDarkMode} toggleMode={toggleMode} />
+                <AddTask isDarkMode={isDarkMode} onAddTask={handleAddTask} title="Lista de Marc" inputplaceholder="Ingrese una Tarea Nueva" inputtype="text" buttontext="Add" />
+                <TaskList isDarkMode={isDarkMode} onDelete={handleRemoveTask} tasks={tasks} />
             </div >
         </>
     )

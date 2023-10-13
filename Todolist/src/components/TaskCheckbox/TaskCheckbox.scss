@@ -1,0 +1,15 @@
+@import "../../sass/theme.scss";
+
+.left-Task {
+    display: flex;
+    align-items: center;
+    transition: border-color 0.25s;
+
+    &.dark-mode {
+        border-color: white;
+    }
+
+    &.light-mode {
+        border-color: black;
+    }
+}

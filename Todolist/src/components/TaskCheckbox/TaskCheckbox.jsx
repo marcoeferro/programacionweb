@@ -1,5 +1,5 @@
 
-import "./TaskCheckbox.css"
+import "./TaskCheckbox.scss"
 function TaskCheckbox({ onChange }) {
     return (
         <>

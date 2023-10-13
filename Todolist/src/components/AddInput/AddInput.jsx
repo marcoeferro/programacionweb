@@ -1,7 +1,8 @@
-function AddInput({ placeholder, type, handleInputChange, value }) {
+import "./AddInput.scss"
+function AddInput({ placeholder, type, handleInputChange, value, isDarkMode }) {
     return (
         <>
-            <input type={type} placeholder={placeholder} onChange={handleInputChange} value={value} />
+            <input className={`input-task ${isDarkMode ? 'light-mode' : 'dark-mode'}`} type={type} placeholder={placeholder} onChange={handleInputChange} value={value} />
         </>
     )
 }
