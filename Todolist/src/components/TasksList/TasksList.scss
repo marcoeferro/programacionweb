@@ -2,15 +2,18 @@ li {
     border: 2px solid #000000;
     border-radius: 4px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
     height: 32px;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .Cartel {

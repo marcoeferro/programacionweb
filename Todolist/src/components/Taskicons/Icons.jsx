@@ -1,7 +1,7 @@
 import IconDelete from "./IconDelete/IconDelete"
 import IconShare from "./IconShare/IconShare"
 import IconCopy from "./Iconcopy/IconCopy"
-
+import "./Icons.scss"
 function Icons({ onDelete, id }) {
     return (
         <div className="icons">

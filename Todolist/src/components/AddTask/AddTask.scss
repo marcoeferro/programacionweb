@@ -1,14 +1,10 @@
 .UpperPart {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
     position: relative;
     width: 100%;
     max-width: 352px;
-}
-
-.add-tast-contenedor {
-    width: 352px;
-    height: fit-content;
-    position: relative;
+    max-height: 40px;
 }

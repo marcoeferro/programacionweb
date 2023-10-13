@@ -1,4 +1,3 @@
-
 import "./IconCopy.scss"
 function IconCopy({ onDelete, id }) {
     const handleclicked = () => {

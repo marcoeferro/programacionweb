@@ -31,7 +31,7 @@ function TodoList() {
 
     return (
         <>
-            <div>
+            <div className="app">
                 <AddTitle title="Lista de Marc" isDarkMode={isDarkMode} toggleMode={toggleMode} />
                 <AddTask isDarkMode={isDarkMode} onAddTask={handleAddTask} title="Lista de Marc" inputplaceholder="Ingrese una Tarea Nueva" inputtype="text" buttontext="Add" />
                 <TaskList isDarkMode={isDarkMode} onDelete={handleRemoveTask} tasks={tasks} />
